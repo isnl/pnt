@@ -1,0 +1,30 @@
+{
+  "name": "pnt",
+  "version": "1.0.2",
+  "description": "webpack demo",
+  "main": "dist/boundle.min.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "dev": "cross-env --NODE_ENV=development --libraryTarget=var webpack-dev-server",
+    "build:brow": "cross-env --NODE_ENV=production --libraryTarget=var webpack",
+    "build:umd": "cross-env --NODE_ENV=production --libraryTarget=umd webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peanut",
+  "license": "MIT",
+  "dependencies": {
+    "pnt": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.10.1",
+    "@types/webpack": "^4.41.22",
+    "awesome-typescript-loader": "^5.2.1",
+    "cross-env": "^7.0.2",
+    "ts-loader": "^8.0.3",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
