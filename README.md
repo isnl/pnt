@@ -17,4 +17,9 @@ console.log(date.getTime(false, " ")); //18 51 6
 console.log(date.getDateAndTime(true, "-", ":")); //2020-09-15 18:51:07
 console.log(date.getDateAndTime(false, "-", ":")); //2020-9-15 18:51:7
 console.log(date.getDateAndTime(false, "/", " ")); //2020/9/15 18 51 7
+
+console.log(date.week("")); //星期三
+console.log(date.week("礼拜")); //礼拜三
+console.log(date.week("星期")); //星期三
+console.log(date.week("周")); //周三
 ```

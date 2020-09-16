@@ -3,7 +3,7 @@
  * @Description:  时间处理工具
  * @Date: 2020-09-16 14:24:37
  * @Last Modified by: Peanut
- * @Last Modified time: 2020-09-16 14:34:54
+ * @Last Modified time: 2020-09-16 15:24:05
  */
 const date = {
   getTodayDate: function (): Date {
@@ -53,6 +53,15 @@ const date = {
     const d = this.getDate(showZero, dsep);
     const t = this.getTime(showZero, tse);
     return `${d} ${t}`;
+  },
+  getWeek(prefix: string): string {
+    if (!prefix) {
+      prefix = "星期";
+    }
+    const date: Date = this.getTodayDate();
+    const weeks = ["日", "一", "二", "三", "四", "五", "六"];
+    const w = date.getDay();
+    return prefix + weeks[w];
   },
 };
 export { date };
