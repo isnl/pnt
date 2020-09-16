@@ -1,7 +1,7 @@
 ### Install
 
 ```bash
-npm i pnt
+npm install pnt -S
 ```
 
 ### How to use
