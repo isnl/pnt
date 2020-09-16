@@ -25,7 +25,7 @@
   "author": "Peanut",
   "license": "MIT",
   "dependencies": {
-    "pnt": "^1.0.1"
+    "pnt": "^1.0.6"
   },
   "devDependencies": {
     "@types/node": "^14.10.1",

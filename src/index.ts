@@ -1,2 +1,2 @@
-import { utils } from "./utils";
-export { utils };
+import { date } from "./utils";
+export { date };
