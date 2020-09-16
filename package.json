@@ -1,6 +1,6 @@
 {
   "name": "pnt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "webpack demo",
   "main": "dist/boundle.min.js",
   "types": "dist/types/index.d.ts",
