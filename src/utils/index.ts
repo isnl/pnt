@@ -1,3 +1,10 @@
+/*
+ * @Author: Peanut 
+ * @Description:  时间处理工具
+ * @Date: 2020-09-16 14:24:37 
+ * @Last Modified by: Peanut
+ * @Last Modified time: 2020-09-16 14:25:07
+ */
 const utils = {
   getTodayDate: function (): Date {
     return new Date();

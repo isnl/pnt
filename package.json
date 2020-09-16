@@ -1,19 +1,23 @@
 {
   "name": "pnt",
-  "version": "1.0.4",
-  "description": "webpack demo",
-  "main": "dist/boundle.min.js",
+  "version": "1.0.5",
+  "description": "a simple tool library",
+  "main": "dist/pnt.min.js",
   "types": "dist/types/index.d.ts",
-  "publishConfig": {
-    "registry": "https://www.npmjs.com/package/pnt"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/isnl/pnt"
   },
-  "keywords": [],
+  "keywords": [
+    "utils",
+    "time",
+    "date",
+    "easy lodash",
+    "lodash",
+    "tools"
+  ],
   "scripts": {
-    "dev": "cross-env --NODE_ENV=development --libraryTarget=var webpack-dev-server",
+    "dev": "cross-env --NODE_ENV=development --libraryTarget=var webpack-dev-server --open",
     "build:brow": "cross-env --NODE_ENV=production --libraryTarget=var webpack",
     "build:umd": "cross-env --NODE_ENV=production --libraryTarget=umd webpack",
     "test": "echo \"Error: no test specified\" && exit 1"

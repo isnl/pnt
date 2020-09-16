@@ -2,7 +2,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.ts",
   output: {
-    filename: "boundle.min.js",
+    filename: "pnt.min.js",
     path: path.resolve(__dirname, "dist"),
     library: "pnt",
     libraryTarget: process.env.libraryTarget,
