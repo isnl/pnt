@@ -1,3 +1,3 @@
 import { date } from "./date";
-
-export { date };
+import { utils } from "./utils";
+export { date, utils };

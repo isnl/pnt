@@ -6,6 +6,8 @@ npm install pnt -S
 
 ### How to use
 
+#### date
+
 ```javascript
 import { date } from "pnt";
 console.log(date.getDate(true, "-")); //2020-09-15
@@ -22,4 +24,11 @@ console.log(date.week("")); //星期三
 console.log(date.week("礼拜")); //礼拜三
 console.log(date.week("星期")); //星期三
 console.log(date.week("周")); //周三
+```
+
+#### utils
+
+```javascript
+import { utils } from "pnt";
+console.log(utils.getQueryByUrl("https://iiter.cn/user?a=peanut&b=true$c=123")); //{ a: "peanut", b: true, c: 123 };
 ```
