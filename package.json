@@ -1,6 +1,6 @@
 {
   "name": "pnt",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "a simple tool library",
   "main": "dist/pnt.min.js",
   "types": "dist/types/index.d.ts",
