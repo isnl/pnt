@@ -63,5 +63,18 @@ const date = {
     const w = date.getDay();
     return prefix + weeks[w];
   },
+  getCountDown(ts: number): string {
+    //如果大于或者等于
+    const nowDate = new Date().getTime();
+    if (nowDate >= ts) {
+      return "已结束";
+    }
+    const diffTime = ts - nowDate; //距离结束时间的毫秒数
+    let d = Math.floor(diffTime / (1000 * 60 * 60 * 24)); //计算天数
+    let h = Math.floor((diffTime / (1000 * 60 * 60)) % 24); //计算小时数
+    let m = Math.floor((diffTime / (1000 * 60)) % 60); //计算分钟数
+    let s = Math.floor((diffTime / 1000) % 60); //计算秒数
+    return d + "天" + h + "小时" + m + "分" + s + "秒"; //返回倒计时的字符串
+  },
 };
 export { date };

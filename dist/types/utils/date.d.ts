@@ -3,5 +3,6 @@ declare const date: {
     getTime(showZero?: boolean | undefined, sep?: string | undefined): string;
     getDateAndTime(showZero?: boolean | undefined, dsep?: string | undefined, tse?: string | undefined): string;
     getWeek(prefix: string): string;
+    getCountDown(ts: number): string;
 };
 export { date };

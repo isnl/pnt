@@ -24,6 +24,8 @@ console.log(date.week("")); //星期三
 console.log(date.week("礼拜")); //礼拜三
 console.log(date.week("星期")); //星期三
 console.log(date.week("周")); //周三
+
+console.log(date.getCountDown(1602727200000)); //3天12时20秒
 ```
 
 #### utils
