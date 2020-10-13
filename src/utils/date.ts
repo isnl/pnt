@@ -2,11 +2,19 @@
  * @Author: Peanut
  * @Description:  时间处理工具
  * @Date: 2020-09-16 14:24:37
- * @Last Modified by: Peanut
- * @Last Modified time: 2020-09-16 15:24:05
+ * @Last Modified by: 张欢
+ * @Last Modified time: 2020-10-13 11:39:27
  */
 const getTodayDate = (): Date => {
   return new Date();
+};
+/**
+ * 是否补0
+ * @param s 
+ * @param showZero 
+ */
+const z = (s: number, showZero?: boolean): string | number => {
+  return showZero ? (s >= 10 ? s : "0" + s) : s;
 };
 const date = {
   /**
@@ -17,19 +25,9 @@ const date = {
   getDate(showZero?: boolean, sep?: string): string {
     const date: Date = getTodayDate();
     const y: number = date.getFullYear();
-    const m: string | number = showZero
-      ? date.getMonth() + 1 > 10
-        ? date.getMonth() + 1
-        : "0" + (date.getMonth() + 1)
-      : date.getMonth() + 1;
-    const d: number | string = showZero
-      ? date.getDate() > 10
-        ? date.getDate()
-        : "0" + date.getDate()
-      : date.getDate();
-    if (!sep) {
-      sep = "/";
-    }
+    const m: string | number = z(date.getMonth() + 1, showZero);
+    const d: number | string = z(date.getDate(), showZero);
+    if (!sep) sep = "/";
     return `${y}${sep}${m}${sep}${d}`;
   },
   /**
@@ -39,24 +37,10 @@ const date = {
    */
   getTime(showZero?: boolean, sep?: string): string {
     const date: Date = getTodayDate();
-    const h: string | number = showZero
-      ? date.getHours() < 10
-        ? "0" + date.getHours()
-        : date.getHours()
-      : date.getHours();
-    const m: string | number = showZero
-      ? date.getMinutes() < 10
-        ? "0" + date.getMinutes()
-        : date.getMinutes()
-      : date.getMinutes();
-    const s: string | number = showZero
-      ? date.getSeconds() < 10
-        ? "0" + date.getSeconds()
-        : date.getSeconds()
-      : date.getSeconds();
-    if (!sep) {
-      sep = ":";
-    }
+    const h: string | number = z(date.getHours(), showZero);
+    const m: string | number = z(date.getMinutes(), showZero);
+    const s: string | number = z(date.getSeconds(), showZero);
+    if (!sep) sep = ":";
     return `${h}${sep}${m}${sep}${s}`;
   },
   /**
@@ -75,9 +59,7 @@ const date = {
    * @param prefix 前缀
    */
   getWeek(prefix: string): string {
-    if (!prefix) {
-      prefix = "星期";
-    }
+    if (!prefix) prefix = "星期";
     const date: Date = getTodayDate();
     const weeks = ["日", "一", "二", "三", "四", "五", "六"];
     const w = date.getDay();
