@@ -9,6 +9,11 @@ const getTodayDate = (): Date => {
   return new Date();
 };
 const date = {
+  /**
+   * 获取当前日期 2020-10-01
+   * @param showZero 是否自动补0
+   * @param sep 分隔符号
+   */
   getDate(showZero?: boolean, sep?: string): string {
     const date: Date = getTodayDate();
     const y: number = date.getFullYear();
@@ -27,6 +32,11 @@ const date = {
     }
     return `${y}${sep}${m}${sep}${d}`;
   },
+  /**
+   * 获取当前时间 00:00:00
+   * @param showZero 是否自动补0
+   * @param sep 分隔符号
+   */
   getTime(showZero?: boolean, sep?: string): string {
     const date: Date = getTodayDate();
     const h: string | number = showZero
@@ -49,11 +59,21 @@ const date = {
     }
     return `${h}${sep}${m}${sep}${s}`;
   },
+  /**
+   * 获取日期和时间
+   * @param showZero 是否自动补0
+   * @param dsep 日期分隔符
+   * @param tse 时间分隔符
+   */
   getDateAndTime(showZero?: boolean, dsep?: string, tse?: string): string {
     const d = this.getDate(showZero, dsep);
     const t = this.getTime(showZero, tse);
     return `${d} ${t}`;
   },
+  /**
+   * 获取星期
+   * @param prefix 前缀
+   */
   getWeek(prefix: string): string {
     if (!prefix) {
       prefix = "星期";
@@ -63,6 +83,10 @@ const date = {
     const w = date.getDay();
     return prefix + weeks[w];
   },
+  /**
+   * 获取现在到未来某一时间戳的倒计时
+   * @param ts 时间戳
+   */
   getCountDown(ts: number): string {
     //如果大于或者等于
     const nowDate = new Date().getTime();
